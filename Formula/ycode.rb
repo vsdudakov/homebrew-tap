@@ -3,23 +3,23 @@
 class Ycode < Formula
   desc "Lightweight code editor for agent-driven development: terminal UI and GPU window"
   homepage "https://github.com/vsdudakov/yara-code"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.4.0/ycode-v0.4.0-aarch64-apple-darwin.tar.gz"
-      sha256 "a99041c556c27e2d3627dc1b7e4048fff82253861f68725a4d066d4758fa4635"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.0/ycode-v0.5.0-aarch64-apple-darwin.tar.gz"
+      sha256 "74b6b8000a759e4846cca6240d2e22e2886ac00e1dfe06058fe8d5a6454c206a"
     end
     on_intel do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.4.0/ycode-v0.4.0-x86_64-apple-darwin.tar.gz"
-      sha256 "71a48faf597ede04f32050747e15dacb8d1137330781e19929215424777fb9e0"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.0/ycode-v0.5.0-x86_64-apple-darwin.tar.gz"
+      sha256 "c263eebece1e57b99aa2eef09677f9dfbfa6e226ba28aa24bb240a793f6358f5"
     end
   end
 
   on_linux do
-    url "https://github.com/vsdudakov/yara-code/releases/download/v0.4.0/ycode-v0.4.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "c3447b1a8675d05b05355bfec2a78559e8d7598cf02149bd68f4446534616c0b"
+    url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.0/ycode-v0.5.0-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "d054f38f52760d762d1c11856c7363dedb78e806a1957968b43a857fcec2cf98"
   end
 
   # One formula, both frontends: `yara` for the terminal, `yara-gui` for the
