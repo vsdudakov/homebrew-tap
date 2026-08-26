@@ -11,8 +11,8 @@
 cask "yara-code" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.5.11"
-  sha256 arm: "bb0a9f201fdf6ee6abaea760eba40f94fc064b0f9413f36f8ff4ec673c8a74cc", intel: "0fc1b59a246de25bb725050d98c93eb853e7cd7550e40183150656bf707d90aa"
+  version "0.5.12"
+  sha256 arm: "68e7e99b52fc57d3094bbc9911e66c79a656763869a6e6669dfe7ed1dba4266e", intel: "aedab4fd5b933c16ba4aefa0a179cfafa97302783beb26724eb1c194e0e5b525"
 
   url "https://github.com/vsdudakov/yara-code/releases/download/v#{version}/ycode-v#{version}-#{arch}-apple-darwin.tar.gz"
   name "Yara Code"

@@ -3,28 +3,28 @@
 class Ycode < Formula
   desc "Lightweight code editor for agent-driven development: terminal UI and GPU window"
   homepage "https://github.com/vsdudakov/yara-code"
-  version "0.5.11"
+  version "0.5.12"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.11/ycode-v0.5.11-aarch64-apple-darwin.tar.gz"
-      sha256 "bb0a9f201fdf6ee6abaea760eba40f94fc064b0f9413f36f8ff4ec673c8a74cc"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.12/ycode-v0.5.12-aarch64-apple-darwin.tar.gz"
+      sha256 "68e7e99b52fc57d3094bbc9911e66c79a656763869a6e6669dfe7ed1dba4266e"
     end
     on_intel do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.11/ycode-v0.5.11-x86_64-apple-darwin.tar.gz"
-      sha256 "0fc1b59a246de25bb725050d98c93eb853e7cd7550e40183150656bf707d90aa"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.12/ycode-v0.5.12-x86_64-apple-darwin.tar.gz"
+      sha256 "aedab4fd5b933c16ba4aefa0a179cfafa97302783beb26724eb1c194e0e5b525"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.11/ycode-v0.5.11-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5ded4b2589ae151e6bc609a5129340375ba9aca4c2fdf6ebeda7f47e14b6baa5"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.12/ycode-v0.5.12-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "6aee5c39ab2cbdb7545694813d12e776d8d8cf79cd7efa7b1fecc076b96cf811"
     end
     on_intel do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.11/ycode-v0.5.11-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "00c8187dabc5737acf6c4d5cc64c7cfc0efcc96a5c05b5852b4a3ecf3953dd9f"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.12/ycode-v0.5.12-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "458dc3a99c5ba8401d3b8973818ef85506da9f3da9c3532fda36c0f243c6e20a"
     end
   end
 
