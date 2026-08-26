@@ -3,28 +3,28 @@
 class Ycode < Formula
   desc "Lightweight code editor for agent-driven development: terminal UI and GPU window"
   homepage "https://github.com/vsdudakov/yara-code"
-  version "0.5.9"
+  version "0.5.10"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.9/ycode-v0.5.9-aarch64-apple-darwin.tar.gz"
-      sha256 "07eb59149fd2f785f6da4eb7f0b2cf63ddca356792b5e763831717c0c5cd4c80"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.10/ycode-v0.5.10-aarch64-apple-darwin.tar.gz"
+      sha256 "a5a589156b64e07e9d0478af77718bf1637a9f82eb204d0314c89798f034bd88"
     end
     on_intel do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.9/ycode-v0.5.9-x86_64-apple-darwin.tar.gz"
-      sha256 "04bc26674c61d040995959c283d03fbd6f2452a0f5619a83cd42884474f14efb"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.10/ycode-v0.5.10-x86_64-apple-darwin.tar.gz"
+      sha256 "a1628a298c202bb54246e3029f2faf9d3b6cdfe6114cb70e321af6f92c591657"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.9/ycode-v0.5.9-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "d255ab28b23e9b33ea8d0dd1538f126981d96b09c50d80bf77ad5f549348f892"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.10/ycode-v0.5.10-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "9ed34985cfa56ea7c34e551d999756df069344c556f1201f76663c708e3f6c1c"
     end
     on_intel do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.9/ycode-v0.5.9-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d669edd782184a748ddd1cbe762dc177ee94dcc4ee52d3b9b7ff0a04dcded111"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v0.5.10/ycode-v0.5.10-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "dae0e606277a048bf8f47c469ad51c5ab9414bdb169d52cd71f7127cad318f58"
     end
   end
 
@@ -46,32 +46,19 @@ class Ycode < Formula
     end
   end
 
-  # Homebrew keeps its own tree, and an application is only an application once
-  # Finder and Spotlight can see it. A copy rather than a link: Homebrew's own
-  # casks stopped linking years ago because Launch Services indexes what it can
-  # see, and a symlinked bundle is not it. An upgrade replaces it wholesale.
-  def post_install
-    return unless OS.mac?
-
-    applications = Pathname.new("/Applications")
-    return unless applications.writable?
-
-    installed = applications/"Yara Code.app"
-    FileUtils.rm_rf(installed)
-    system "/usr/bin/ditto", prefix/"Yara Code.app", installed
-  end
-
+  # No copy into /Applications from here. A formula's post-install step runs in
+  # a sandbox that stops at Homebrew's own prefix, so a copy attempted from one
+  # never lands and never says why; putting an application where Finder can see
+  # it is a cask's job, and there is a cask beside this formula that does it.
   def caveats
     return unless OS.mac?
 
     <<~CAVEATS
-      Yara Code.app is in /Applications — open it from the Dock or from
-      Spotlight. It is signed ad-hoc rather than with an Apple Developer ID, so
-      the first open reports an unidentified developer: allow it once in
-      System Settings → Privacy & Security.
+      This installs the two commands. For Yara Code as an application — in
+      /Applications, with its icon, in the Dock and in Spotlight — install the
+      cask instead:
 
-      Uninstalling leaves that copy behind; remove it with
-        rm -rf "/Applications/Yara Code.app"
+        brew uninstall ycode && brew install vsdudakov/tap/yara-code
     CAVEATS
   end
 
