@@ -3,28 +3,28 @@
 class Ycode < Formula
   desc "Terminal editor for the agent loop: your coding agent beside the diff of what it did"
   homepage "https://github.com/vsdudakov/yara-code"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v1.1.0/ycode-v1.1.0-aarch64-apple-darwin.tar.gz"
-      sha256 "ddda5fce9484b57af7c28fdbc54867d5f94409f942eb3675a5c495205d959990"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v1.2.0/ycode-v1.2.0-aarch64-apple-darwin.tar.gz"
+      sha256 "dbaf4a466b7abc66e546744eddf49561ac5b63f598ba9fb7e8d5d5d2c6896837"
     end
     on_intel do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v1.1.0/ycode-v1.1.0-x86_64-apple-darwin.tar.gz"
-      sha256 "6d3d4568b9080c623a8a0e974d0c4dadf8ad2ac9db39f4b9b13dd9f6e9704aad"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v1.2.0/ycode-v1.2.0-x86_64-apple-darwin.tar.gz"
+      sha256 "be5eecfe008beb31941cfe7f71bbabccdf1fbd96ef9d7599a16f520c287b60d7"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v1.1.0/ycode-v1.1.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "306ce327980ee12fab31e6cc8d890bf849816a3d75eacee2ce095305b5fd97ed"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v1.2.0/ycode-v1.2.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2354b4c878bfb70eb363f9403be011b12b85d220dd6a9a54b928370c49f783a6"
     end
     on_intel do
-      url "https://github.com/vsdudakov/yara-code/releases/download/v1.1.0/ycode-v1.1.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ab2d9809f894e49506428ac5306011ef423e611cac2e109cfd2449276777e95b"
+      url "https://github.com/vsdudakov/yara-code/releases/download/v1.2.0/ycode-v1.2.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "b13f59df0fa551fd90996d67ec237136957a0f94a47b5475f9400723692ba083"
     end
   end
 
