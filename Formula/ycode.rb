@@ -9,22 +9,22 @@ class Ycode < Formula
   on_macos do
     on_arm do
       url "https://github.com/vsdudakov/yara-code/releases/download/v1.6.2/ycode-v1.6.2-aarch64-apple-darwin.tar.gz"
-      sha256 "26d59d77e9aa0f24e94f67fdd49cbb39cc2f437b0f0ba97f22f2bf1fe5174e2c"
+      sha256 "5767da1e86457ff789b59b2c68920ba3917af30b193f0e3c5cb3d7b95df0ad28"
     end
     on_intel do
       url "https://github.com/vsdudakov/yara-code/releases/download/v1.6.2/ycode-v1.6.2-x86_64-apple-darwin.tar.gz"
-      sha256 "4f1e4171bcb2b009a4e393e32e160ad5478207d564289c27cb58ba1a715cda37"
+      sha256 "5a138019cb4e7656866fc29abfb10596b9d2efe659ab4ca202f38c4debddf0ee"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/vsdudakov/yara-code/releases/download/v1.6.2/ycode-v1.6.2-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "9dd5878e45f368f6e9b40857a831c4d90fbb7a71f35242a3f67fda9da1704c42"
+      sha256 "b672ffd190b71f8cb7bc0c8112d81a80431fdd1c4ccf3c53bfdb3743fa9dbb43"
     end
     on_intel do
       url "https://github.com/vsdudakov/yara-code/releases/download/v1.6.2/ycode-v1.6.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "038e4d3db8299508b070e8665ccf9a18c92525fca3c0a63e8e86cba14e475c03"
+      sha256 "f167d653c3b98dc40011e1e3685ac9fb01b90397a8b3169495366e3755d1d762"
     end
   end
 
